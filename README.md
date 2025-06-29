@@ -89,9 +89,9 @@ Filing medical insurance claims is often a frustrating process—especially for 
 
 ---
 
-## 🧪 Demo
+## 🧪 Deployed Website
 
-🔗 [Live Demo](https://nilardri2006.github.io/Swasthya/)
+🔗 (https://swasthya-ai.onrender.com)
 
 Explore how the AI advisor works, try out document uploads, and interact with the multilingual chatbot.
 
@@ -108,10 +108,10 @@ Explore how the AI advisor works, try out document uploads, and interact with th
 
 ## 🤝 Contributors
 
-- Nilardri (Frontend & Deployment)
+- Rishaan Kumar (Frontend/ UI/UX Designer and DBMS Manager)
 - Shreesh Chakraborty (Project Analyst)
 - Ankit Talukder(AI & Backend)
-- Rishan Kumar(UI designer & DBMS manager)
+- Nilardri Pramanick (Debugger and AI Chatbot)
 - सWASTHYA – Hackathon Project, 2025
 
 ---
