@@ -10,13 +10,17 @@ const app = express()
 const PORT = process.env.PORT || 3000
 
 // Middleware
-app.use(cors())
+app.use(cors({
+  origin: "https://swasthya-ai.onrender.com",
+  methods: ["GET", "POST"]
+}))
+
 app.use(express.json())
 app.use(express.static(path.join(__dirname, 'docs')))
 app.use(express.static(path.join(__dirname)))
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
