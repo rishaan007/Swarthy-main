@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>सWASTHYA - Your Medical Claims Assistant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel=" stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+
+                <a href="index.html">
+                    <img src="mainlogo.png" alt="Swasthya Logo"
+                        style="height: 80px;filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.5))">
+                </a>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="themeToggle" aria-label="Toggle theme">
+                <span id="themeIcon">🌙</span>
+            </button>
+
+
+
+            <div class="header-actions">
+                <div class="toggle-switch"></div>
+                <span id="userWelcome" class="user-welcome"></span>
+                <button class="btn-outline" onclick="logout()">Logout</button>
+            </div>
+
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="canvas-container" id="hero-canvas"></div>
+        <div class="container hero-content">
+            <div class="side">
+                <div class="circle">
+                    <div class="animated-text" style="text-align:center;justify-content: center;">
+
+
+
+                        <div class="name">
+                            <p class="brand-name">
+                                <span id="changing-letter" class="fixed-letter">S</span>
+                                <span class="rest-of-name">wasthya</span>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="ins">
+
+                    <h1> Insurance Advisor </h1>
+
+                    <p> सWASTHYA's AI Insurance Advisor offers instant, personalized health insurance guidance powered
+                        by
+                        advanced artificial intelligence.</p>
+
+                    <div class="cta-buttons">
+
+                        <a href="https://ankit2061-ai-adviser-1-0-app-cbfvsy.streamlit.app" target="_blank"
+                            class="btn btn-primary btn-large">
+                            <i class="fas fa-upload"></i>
+                            Get Advice
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Floating medical elements -->
+            <div class="floating-medical" style="top: 20%; left: 10%; animation-delay: 0s;">
+                <i class="fas fa-pills floating-cross"></i>
+            </div>
+            <div class="floating-medical" style="top: 60%; right: 15%; animation-delay: 2s;">
+                <i class="fas fa-plus floating-cross"></i>
+            </div>
+            <div class="floating-medical" style="bottom: 30%; left: 20%; animation-delay: 4s;">
+                <div class="floating-pill"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="canvas-container" id="features-canvas"></div>
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Core Features</h2>
+                <p>सWASTHYA provides powerful tools to simplify your medical claims experience</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Document Summarization</h3>
+                    <p>Extracts and summarizes lengthy medical reports into short, understandable summaries that
+                        highlight the most important information.</p>
+                    <a href="https://ankit2061-medicalsummarizer-app-vts49d.streamlit.app/" target="_blank"
+                        class="feature-link">
+                        Try Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+
+
+                    <h3>Insurance Advisor</h3>
+                    <p> सWASTHYA uses advanced AI to simplify medical insurance claims.
+                        Patients get faster, clearer results — just by uploading a document.</p>
+                    <a href="https://ankit2061-ai-adviser-1-0-app-cbfvsy.streamlit.app" target="_blank"
+                        class="feature-link">
+                        Get Advice
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <h3>Auto Document Generator</h3>
+                    <p>Automatically generates professional claim letters, emails, or appeals using patient data to save
+                        you time and effort.</p>
+                    <a href="https://ankit2061-autodocumentgen-doc-gen2-gqqukc.streamlit.app" target="_blank" class="feature-link">
+                        Generate <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Patient Chatbot</h3>
+                    <p>AI chatbot that provides instant answers to questions regarding bills, documents, or the claim
+                        process using your stored data.</p>
+                    <a href="https://ankit2061-patient-chatbot-2-0-app-5fl4mh.streamlit.app" target="_blank"
+                        class="feature-link">
+                        Chat Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure Document Storage</h3>
+                    <p>Store all your medical documents and claims in one secure, HIPAA-compliant location with easy
+                        access whenever needed.</p>
+                    <a href="secure.html" class="feature-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="canvas-container" id="process-canvas"></div>
+        <div class="container">
+            <div class="section-title">
+                <h2>How It Works</h2>
+                <p>Getting started with सWASTHYA is quick and easy</p>
+            </div>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Upload Documents</h3>
+                    <p>Upload your medical bills, insurance statements, and other relevant documents securely to our
+                        platform.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>AI Analysis</h3>
+                    <p>Our AI analyzes your documents, extracts important information, and prepares summaries and
+                        recommendations.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Review & Submit</h3>
+                    <p>Review the AI-generated claim information, make any necessary adjustments, and submit your claim.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Track Progress</h3>
+                    <p>Monitor your claim's progress in real-time through our intuitive dashboard and receive timely
+                        updates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Preview Section -->
+    <section class="dashboard-preview">
+        <div class="container">
+            <div class="section-title">
+                <h2>Your Claims Dashboard</h2>
+                <p>Effortlessly manage and track all your medical insurance claims in one unified dashboard.</p>
+
+                <button class="btn btn-outline btn-large" style="margin-top: 35px;">
+                    View My Claims
+                </button>
+            </div>
+
+            <div class="dashboard-image">
+                <!-- Dashboard preview image would go here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="canvas-container" id="testimonials-canvas"></div>
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Users Say</h2>
+                <p>Thousands of patients have simplified their medical claims process with सWASTHYA</p>
+            </div>
+
+            <div class="testimonial-container">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"सWASTHYA saved me countless hours dealing with my insurance company. The document
+                            summarization feature helped me understand my policy coverage within minutes instead of
+                            hours."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PB</div>
+                        <div class="author-info">
+                            <h4>Pradip Biswas.</h4>
+                            <p>Patient, Garia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The chatbot feature is incredible! It answered all my questions about my claim status
+                            without having to wait on hold with my insurance provider. This tool is a game-changer."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AT</div>
+                        <div class="author-info">
+                            <h4>Aman Thakur</h4>
+                            <p>Patient, Newtown</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The chatbot made everything so easy! I got instant updates on my claim status—no waiting, no
+                            phone calls, just answers. Honestly, it’s like having a 24/7 support agent in my pocket."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">TD</div>
+                        <div class="author-info">
+                            <h4>Tiyasha De</h4>
+                            <p>Patient, NewAlipore</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container cta-content">
+            <h2>Ready to Simplify Your Medical Claims?</h2>
+            <p>Join thousands of users who have saved time and reduced stress with सWASTHYA </p>
+            <a href="signup2.html" id="getttt" class="btn btn-primary btn-large">
+                <i class="fas fa-rocket"></i>
+                Get Started Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo">
+                        <img src="mainlogo.png" alt="Swasthya Logo" style="height: 150px;">
+
+                    </div>
+                    <p style="margin-top: 15px;">Making medical claims processing simple, fast, and transparent with AI.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Features</h3>
+                    <ul>
+                        <li><a href="https://ankit2061-medicalsummarizer-app-vts49d.streamlit.app/">Document Summarization</a></li>
+                        <li><a href="https://ankit2061-autodocumentgen-doc-gen2-gqqukc.streamlit.app">Auto Document Generator</a></li>
+                        <li><a href="https://ankit2061-patient-chatbot-2-0-app-5fl4mh.streamlit.app">Patient Chatbot</a></li>
+                        <li><a href="https://ankit2061-ai-adviser-1-0-app-cbfvsy.streamlit.app">Insurance Advisor</a></li>
+                        <li><a href="secure.html">Secure Document Storage</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="ourteam.html">Our Team</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="mailto:swasthya.help.2025@gmail.com">Contact Us</a></li>
+                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 सWASTHYA . All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Patient Chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-button" id="chatbot-trigger">
+            <i class="fas fa-comment-dots"></i>
+        </div>
+
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chatbot-header">
+                <div class="chatbot-title">
+                    <i class="fas fa-robot"></i>
+                    <span>सWASTHYA Sathi</span>
+                </div>
+                <button class="close-chat" id="close-chat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot-message">
+                    Hello! I'm your सWASTHYA SATHI. How can I help you with your medical claims today?
+                </div>
+            </div>
+
+            <div class="chat-input">
+                <input type="text" placeholder="Type your question here..." id="chat-input-field">
+                <button class="send-message" id="send-message">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize all components
+            initChatbot();
+            initSmoothScrolling();
+            initAnimations();
+            initFeatureLinks();
+            init3DScenes();
+        });
+
+
+        //theme
+        const toggleBtn = document.getElementById("themeToggle");
+        const icon = document.getElementById("themeIcon");
+
+        function updateIcon() {
+            const isLight = document.body.classList.contains("light-mode");
+            icon.textContent = isLight ? "🌙" : "🟡";
+        }
+
+        toggleBtn.addEventListener("click", () => {
+            document.body.classList.toggle("light-mode");
+
+            // Save preference
+            const isLight = document.body.classList.contains("light-mode");
+            localStorage.setItem("theme", isLight ? "light" : "dark");
+
+            updateIcon();
+        });
+
+        // Load saved theme
+        window.addEventListener("DOMContentLoaded", () => {
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "light") {
+                document.body.classList.add("light-mode");
+            }
+            updateIcon();
+        });
+
+        //text changer
+
+        const letters = ['S', 'स', 'શ', 'স', 'ਸ', 'ସ', 'స', 'ச', 'ಸ', 'ଽ', '𑂮'];
+        let index = 0;
+        const letterElement = document.getElementById("changing-letter");
+
+        setInterval(() => {
+            letterElement.style.opacity = 0;
+            setTimeout(() => {
+                index = (index + 1) % letters.length;
+                letterElement.textContent = letters[index];
+                letterElement.style.opacity = 1;
+            }, 300);
+        }, 1200);
+
+
+
+        // 3D Scene Initialization
+        function init3DScenes() {
+            if (typeof THREE === 'undefined') {
+                console.log('Three.js not loaded, skipping 3D scenes');
+                return;
+            }
+
+            // Initialize different 3D scenes for each section
+            initHeroScene();
+            initFeaturesScene();
+            initProcessScene();
+            initTestimonialsScene();
+        }
+
+        function initHeroScene() {
+            const container = document.getElementById('hero-canvas');
+            if (!container) return;
+
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, container.offsetWidth / container.offsetHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+
+            renderer.setSize(container.offsetWidth, container.offsetHeight);
+            renderer.setClearColor(0x000000, 0);
+            container.appendChild(renderer.domElement);
+
+            // Lighting
+            const ambientLight = new THREE.AmbientLight(0x00d4aa, 0.3);
+            scene.add(ambientLight);
+
+            const pointLight = new THREE.PointLight(0x00d4aa, 1, 100);
+            pointLight.position.set(10, 10, 10);
+            scene.add(pointLight);
+
+            // Create floating medical bills
+            const medicalBills = [];
+            for (let i = 0; i < 8; i++) {
+                const billGroup = new THREE.Group();
+
+                // Bill background
+                const billGeometry = new THREE.PlaneGeometry(2, 2.8);
+                const billMaterial = new THREE.MeshPhongMaterial({
+                    color: 0x21262d,
+                    transparent: true,
+                    opacity: 0.8
+                });
+                const bill = new THREE.Mesh(billGeometry, billMaterial);
+                billGroup.add(bill);
+
+                // Bill header
+                const headerGeometry = new THREE.PlaneGeometry(1.8, 0.3);
+                const headerMaterial = new THREE.MeshPhongMaterial({ color: 0x00d4aa });
+                const header = new THREE.Mesh(headerGeometry, headerMaterial);
+                header.position.set(0, 1.1, 0.01);
+                billGroup.add(header);
+
+                // Content lines
+                for (let j = 0; j < 6; j++) {
+                    const lineGeometry = new THREE.PlaneGeometry(1.5, 0.05);
+                    const lineMaterial = new THREE.MeshPhongMaterial({ color: 0x8b949e });
+                    const line = new THREE.Mesh(lineGeometry, lineMaterial);
+                    line.position.set(0, 0.6 - j * 0.2, 0.01);
+                    billGroup.add(line);
+                }
+
+                // Position bills randomly
+                billGroup.position.set(
+                    (Math.random() - 0.5) * 30,
+                    (Math.random() - 0.5) * 20,
+                    (Math.random() - 0.5) * 20
+                );
+                billGroup.rotation.set(
+                    Math.random() * 0.5,
+                    Math.random() * 0.5,
+                    Math.random() * 0.5
+                );
+
+                scene.add(billGroup);
+                medicalBills.push(billGroup);
+            }
+
+            // Create prescription bottles
+            const bottles = [];
+            for (let i = 0; i < 5; i++) {
+                const bottleGroup = new THREE.Group();
+
+                // Bottle body
+                const bottleGeometry = new THREE.CylinderGeometry(0.3, 0.3, 1.5, 8);
+                const bottleMaterial = new THREE.MeshPhongMaterial({
+                    color: 0x00b894,
+                    transparent: true,
+                    opacity: 0.7
+                });
+                const bottle = new THREE.Mesh(bottleGeometry, bottleMaterial);
+                bottleGroup.add(bottle);
+
+                // Bottle cap
+                const capGeometry = new THREE.CylinderGeometry(0.35, 0.35, 0.2, 8);
+                const capMaterial = new THREE.MeshPhongMaterial({ color: 0x00d4aa });
+                const cap = new THREE.Mesh(capGeometry, capMaterial);
+                cap.position.y = 0.85;
+                bottleGroup.add(cap);
+
+                // Label
+                const labelGeometry = new THREE.PlaneGeometry(1.5, 0.8);
+                const labelMaterial = new THREE.MeshPhongMaterial({ color: 0xf0f6fc });
+                const label = new THREE.Mesh(labelGeometry, labelMaterial);
+                label.position.z = 0.31;
+                bottleGroup.add(label);
+
+                bottleGroup.position.set(
+                    (Math.random() - 0.5) * 25,
+                    (Math.random() - 0.5) * 15,
+                    (Math.random() - 0.5) * 15
+                );
+
+                scene.add(bottleGroup);
+                bottles.push(bottleGroup);
+            }
+
+            camera.position.z = 15;
+
+            // Animation loop
+            function animate() {
+                requestAnimationFrame(animate);
+
+                // Animate medical bills
+                medicalBills.forEach((bill, index) => {
+                    bill.rotation.y += 0.005;
+                    bill.position.y += Math.sin(Date.now() * 0.001 + index) * 0.01;
+                });
+
+                // Animate bottles
+                bottles.forEach((bottle, index) => {
+                    bottle.rotation.y += 0.003;
+                    bottle.position.y += Math.sin(Date.now() * 0.0008 + index) * 0.008;
+                });
+
+                renderer.render(scene, camera);
+            }
+            animate();
+
+            // Handle resize
+            window.addEventListener('resize', () => {
+                camera.aspect = container.offsetWidth / container.offsetHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(container.offsetWidth, container.offsetHeight);
+            });
+        }
+
+        function initFeaturesScene() {
+            const container = document.getElementById('features-canvas');
+            if (!container) return;
+
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, container.offsetWidth / container.offsetHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+
+            renderer.setSize(container.offsetWidth, container.offsetHeight);
+            renderer.setClearColor(0x000000, 0);
+            container.appendChild(renderer.domElement);
+
+            // Lighting
+            const ambientLight = new THREE.AmbientLight(0x00d4aa, 0.4);
+            scene.add(ambientLight);
+
+            // Create floating pills
+            const pills = [];
+            for (let i = 0; i < 15; i++) {
+                const pillGeometry = new THREE.SphereGeometry(0.1, 8, 6);
+                const pillMaterial = new THREE.MeshPhongMaterial({
+                    color: new THREE.Color().setHSL(Math.random(), 0.7, 0.6)
+                });
+                const pill = new THREE.Mesh(pillGeometry, pillMaterial);
+
+                pill.position.set(
+                    (Math.random() - 0.5) * 40,
+                    (Math.random() - 0.5) * 30,
+                    (Math.random() - 0.5) * 20
+                );
+
+                scene.add(pill);
+                pills.push(pill);
+            }
+
+            camera.position.z = 20;
+
+            function animate() {
+                requestAnimationFrame(animate);
+
+                pills.forEach((pill, index) => {
+                    pill.rotation.x += 0.01;
+                    pill.rotation.y += 0.01;
+                    pill.position.y += Math.sin(Date.now() * 0.001 + index) * 0.005;
+                });
+
+                renderer.render(scene, camera);
+            }
+            animate();
+        }
+
+        function initProcessScene() {
+            const container = document.getElementById('process-canvas');
+            if (!container) return;
+
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, container.offsetWidth / container.offsetHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+
+            renderer.setSize(container.offsetWidth, container.offsetHeight);
+            renderer.setClearColor(0x000000, 0);
+            container.appendChild(renderer.domElement);
+
+            // Lighting
+            const ambientLight = new THREE.AmbientLight(0x00d4aa, 0.5);
+            scene.add(ambientLight);
+
+            // Create process flow nodes
+            const nodes = [];
+            for (let i = 0; i < 4; i++) {
+                const nodeGeometry = new THREE.SphereGeometry(0.5, 16, 12);
+                const nodeMaterial = new THREE.MeshPhongMaterial({
+                    color: 0x00d4aa,
+                    transparent: true,
+                    opacity: 0.8
+                });
+                const node = new THREE.Mesh(nodeGeometry, nodeMaterial);
+
+                node.position.set(i * 4 - 6, 0, 0);
+                scene.add(node);
+                nodes.push(node);
+
+                // Connect nodes with lines
+                if (i > 0) {
+                    const lineGeometry = new THREE.BufferGeometry().setFromPoints([
+                        new THREE.Vector3((i - 1) * 4 - 6, 0, 0),
+                        new THREE.Vector3(i * 4 - 6, 0, 0)
+                    ]);
+                    const lineMaterial = new THREE.LineBasicMaterial({ color: 0x00b894 });
+                    const line = new THREE.Line(lineGeometry, lineMaterial);
+                    scene.add(line);
+                }
+            }
+
+            camera.position.z = 10;
+
+            function animate() {
+                requestAnimationFrame(animate);
+
+                nodes.forEach((node, index) => {
+                    node.rotation.y += 0.01;
+                    node.position.y = Math.sin(Date.now() * 0.001 + index) * 0.2;
+                });
+
+                renderer.render(scene, camera);
+            }
+            animate();
+        }
+
+        function initTestimonialsScene() {
+            const container = document.getElementById('testimonials-canvas');
+            if (!container) return;
+
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, container.offsetWidth / container.offsetHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+
+            renderer.setSize(container.offsetWidth, container.offsetHeight);
+            renderer.setClearColor(0x000000, 0);
+            container.appendChild(renderer.domElement);
+
+            // Lighting
+            const ambientLight = new THREE.AmbientLight(0x00d4aa, 0.3);
+            scene.add(ambientLight);
+
+            // Create medical charts
+            const charts = [];
+            for (let i = 0; i < 6; i++) {
+                const chartGroup = new THREE.Group();
+
+                // Chart background
+                const bgGeometry = new THREE.PlaneGeometry(2, 1.5);
+                const bgMaterial = new THREE.MeshPhongMaterial({
+                    color: 0x21262d,
+                    transparent: true,
+                    opacity: 0.2
+                });
+                const bg = new THREE.Mesh(bgGeometry, bgMaterial);
+                chartGroup.add(bg);
+
+                // Chart bars
+                for (let j = 0; j < 5; j++) {
+                    const barHeight = Math.random() * 0.8 + 0.2;
+                    const barGeometry = new THREE.BoxGeometry(0.15, barHeight, 0.1);
+                    const barMaterial = new THREE.MeshPhongMaterial({ color: 0x00d4aa });
+                    const bar = new THREE.Mesh(barGeometry, barMaterial);
+                    bar.position.set(j * 0.3 - 0.6, (barHeight - 1) / 2, 0.01);
+                    chartGroup.add(bar);
+                }
+
+                chartGroup.position.set(
+                    (Math.random() - 0.5) * 20,
+                    (Math.random() - 0.5) * 15,
+                    (Math.random() - 0.5) * 10
+                );
+
+                scene.add(chartGroup);
+                charts.push(chartGroup);
+            }
+
+            camera.position.z = 12;
+
+            function animate() {
+                requestAnimationFrame(animate);
+
+                charts.forEach((chart, index) => {
+                    chart.rotation.y += 0.002;
+                    chart.position.y += Math.sin(Date.now() * 0.0005 + index) * 0.01;
+                });
+
+                renderer.render(scene, camera);
+            }
+            animate();
+        }
+
+        // Chatbot Functionality (Enhanced for dark theme)
+        function initChatbot() {
+            const chatbotTrigger = document.getElementById('chatbot-trigger');
+            const chatbotWindow = document.getElementById('chatbot-window');
+            const closeChat = document.getElementById('close-chat');
+            const chatMessages = document.getElementById('chat-messages');
+            const chatInputField = document.getElementById('chat-input-field');
+            const sendMessage = document.getElementById('send-message');
+
+            if (!chatbotTrigger || !chatbotWindow) {
+                console.error('Chatbot elements not found in the DOM');
+                return;
+            }
+
+            let isChatOpen = false;
+
+            // Medical claim terms for the AI to recognize
+            const claimTerms = {
+                'deductible': 'The amount you pay for covered healthcare services before your insurance plan starts to pay.',
+                'copay': 'A fixed amount you pay for a covered healthcare service, usually when you receive the service.',
+                'coinsurance': 'The percentage of costs you pay after you have met your deductible.',
+                'eob': 'An Explanation of Benefits (EOB) is a statement from your health insurance company explaining what medical treatments and services were paid for on your behalf.',
+                'prior authorization': 'Approval required from your health insurance company before you receive certain services or treatments.',
+                'in-network': 'Providers or healthcare facilities that have contracted with your health insurance company to provide services at negotiated rates.',
+                'out-of-network': 'Providers or facilities that haven\'t contracted with your health insurance company, which usually results in higher costs.',
+                'premium': 'The amount you pay for your health insurance every month.',
+                'claim': 'A request for payment that you or your healthcare provider submits to your health insurance company when you receive services.',
+                'appeal': 'A request to review a denied claim or service.',
+                'hsa': 'A Health Savings Account (HSA) is a tax-advantaged account for individuals with high-deductible health plans to save for medical expenses.',
+                'fsa': 'A Flexible Spending Account (FSA) is a special account where you put money that you can use to pay for certain out-of-pocket healthcare costs.'
+            };
+
+            // Enhanced knowledge base for dark theme
+            const knowledgeBase = {
+                // 🔰 General
+                'hello': 'Hey there! 👋 I’m your सWASTHYA buddy. Ask me anything about insurance, documents, or your claims.',
+                'help': 'I can assist you with:\n✅ Explaining medical terms\n📄 Uploading documents\n🧠 Understanding insurance\n✍️ Generating letters\n💬 Summarizing reports\nType “show features” to explore!',
+
+                // 📦 Feature Overview
+                'features': `Here are our features:\n📄 Document Summarizer – shortens medical PDFs/text\n✍️ Auto Document Generator – creates letters & appeals\n💬 Patient Chatbot – Q&A on your reports\n🧠 Insurance Advisor – picks best policy for you\n💾 Secure Storage – safe place for your docs`,
+
+                // 📁 Secure Document Storage
+                // 📁 Secure Document Storage
+                'secure': `💾 All your uploaded files are stored in secure, encrypted storage.\nHIPAA-compliant, password-protected, and only you can access them.\nNo third-party ever sees your data. 🔐`,
+                // 🧠 Insurance Advisor
+                'advisor': `🧠 The Insurance Advisor compares real-time data from insurers & gives Gemini-powered suggestions based on your profile.\nIt uses scraping + financial analysis to pick the best plans for you.\nWant to open it? Type “open advisor”.`,
+
+                'documents for advisor': `📑 To get the best insurance recommendations, upload:\n• Your existing policy (if any)\n• Income proof or premium budget\n• Health history (optional)\nThe system matches this to real insurer data.`,
+
+                // ✍️ Document Generator
+                'generator': `✍️ The AI Document Generator builds claim letters, appeals, reports — anything medical or insurance-related.\nIt reads your uploaded file, extracts info with AI, and lets you download a ready-to-send .docx file.`,
+
+                'documents for generator': `🧾 You’ll need:\n• Medical bills\n• Doctor notes or discharge summaries\n• Previous insurance letters (if appealing)\n• Diagnosis sheets\nThe better the input, the smarter the output.`,
+
+                // 💬 Patient Chatbot
+                'chatbot': `💬 I’m the Swastha — ask me anything about your uploaded medical file.\nI'll extract data, answer based on your documents, and explain confusing terms like “EOB” or “deductible”.`,
+
+                // 📄 Medical Summarizer
+                'summarizer': `📄 Upload any long medical PDF or text — I’ll extract & summarize:\n• Key diagnoses\n• Treatments\n• Dosages\n• Instructions\nUse it to get clarity before submitting claims or visiting the doctor.`,
+
+                'documents for summarizer': `📘 Best documents to upload:\n• Medical discharge summaries\n• Prescription records\n• Diagnosis reports\n• Blood test or lab results\nAll should be PDF or plain text for clean summaries.`,
+
+                // 🎯 Dashboard
+                'dashboard': `📊 Your dashboard gives real-time status on all claims: submitted, approved, or denied.\nYou’ll see document links, update history, and next steps.`,
+
+                // 📬 Contact
+                'contact': `☎️ Email us at swasthya.help.2025@gmail.com\nWe’re available Mon–Fri, 9am–5pm IST.\nWant to speak to a human? Just say “talk to support”.`,
+
+                // ❓ Unknown
+                'default': `🤔 Hmm, I didn’t understand that. You can ask:\n• “How to use document generator?”\n• “What to upload for summarizer?”\n• “Open insurance advisor”\nOr say “help” to get the full list.`
+            };
+
+
+
+            // Toggle chatbot window
+            if (chatbotTrigger) {
+                chatbotTrigger.addEventListener('click', function () {
+                    if (isChatOpen) {
+                        chatbotWindow.style.display = 'none';
+                        isChatOpen = false;
+                    } else {
+                        chatbotWindow.style.display = 'flex';
+                        if (chatInputField) chatInputField.focus();
+                        isChatOpen = true;
+                    }
+                });
+            }
+
+            if (closeChat) {
+                closeChat.addEventListener('click', function () {
+                    chatbotWindow.style.display = 'none';
+                    isChatOpen = false;
+                });
+            }
+
+            // Function to add a message to the chat
+            // Scroll to section helper
+            function scrollToSection(selector) {
+                const section = document.querySelector(selector);
+                if (section) {
+                    window.scrollTo({
+                        top: section.offsetTop - 60,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+
+            function addMessageToChat(message, sender) {
+                if (!chatMessages) {
+                    console.error('Chat messages container not found');
+                    return;
+                }
+
+                const messageDiv = document.createElement('div');
+                messageDiv.classList.add('message', sender === 'user' ? 'user-message' : 'bot-message');
+
+                if (sender === 'bot') {
+                    let messageText = message;
+
+                    // Check if any terms in the knowledge base need to be linked
+                    for (const [term, definition] of Object.entries(claimTerms)) {
+                        const termRegex = new RegExp(`\\b${term}\\b`, 'gi');
+                        if (messageText.toLowerCase().includes(term)) {
+                            messageText = messageText.replace(termRegex, `<span class="term-highlight" title="${definition}">${term}</span>`);
+                        }
+                    }
+
+                    messageDiv.innerHTML = messageText;
+                } else {
+                    messageDiv.textContent = message;
+                }
+
+                chatMessages.appendChild(messageDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            function showRedirectButtons(url) {
+                const quickReplies = document.createElement('div');
+                quickReplies.classList.add('quick-replies');
+
+                const yesBtn = document.createElement('button');
+                yesBtn.textContent = '✅ Yes, take me there';
+                yesBtn.addEventListener('click', function () {
+                    addMessageToChat('Yes, take me there', 'user');
+                    setTimeout(() => {
+                        window.open(url, '_blank');
+                    }, 600);
+                });
+
+                const noBtn = document.createElement('button');
+                noBtn.textContent = '❌ No, stay here';
+                noBtn.addEventListener('click', function () {
+                    addMessageToChat('No, stay here', 'user');
+                    setTimeout(() => {
+                        addMessageToChat('Alright, I\'ll stay put. Let me know if you change your mind! 🙌', 'bot');
+                    }, 600);
+                });
+
+                quickReplies.appendChild(yesBtn);
+                quickReplies.appendChild(noBtn);
+                chatMessages.appendChild(quickReplies);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            // Function to process user input and generate response
+            function processUserInput(userInput) {
+                const input = userInput.toLowerCase().trim();
+
+                if (input.includes("feature")) {
+                    scrollToSection("#features");
+                    return knowledgeBase["features"];
+                }
+                if (input.includes("testimonial")) {
+                    scrollToSection("#testimonials");
+                    return "Scrolling to testimonials 📣";
+                }
+                if (input.includes("contact")) {
+                    scrollToSection("#contact");
+                    return "Here’s how you can reach us 👇";
+                }
+                if (input.includes("about us")) {
+                    setTimeout(() => window.location.href = "aboutus.html", 800);
+                    return "Redirecting to About Us 💼";
+                }
+                if (input.includes("our team")) {
+                    setTimeout(() => window.location.href = "ourteam.html", 800);
+                    return "Redirecting to meet our team 👨‍⚕️👩‍💻";
+                }
+
+                // Smart feature explain → ask → redirect
+                if (input.includes("document generator")) {
+                    setTimeout(() => {
+                        addMessageToChat("✍️ <strong>Auto Document Generator</strong> helps you create claim letters, appeals, and insurance-related documents using AI. It's fast, personalized, and downloadable.", 'bot');
+                        setTimeout(() => {
+                            addMessageToChat("👉 Want to try it now?", 'bot');
+                            showRedirectButtons("document-generator/index.html");
+                        }, 800);
+                    }, 400);
+                    return "";
+                }
+
+                if (input.includes("summarizer")) {
+                    setTimeout(() => {
+                        addMessageToChat("📄 <strong>Medical Document Summarizer</strong> extracts key info like diagnosis, tests, and treatments from long documents. Helps you understand your reports quickly.", 'bot');
+                        setTimeout(() => {
+                            addMessageToChat("👉 Want to open the summarizer now?", 'bot');
+                            showRedirectButtons("https://ankit2061-medicalsummarizer-app-vts49d.streamlit.app/");
+                        }, 800);
+                    }, 400);
+                    return "";
+                }
+
+                if (input.includes("insurance advisor")) {
+                    setTimeout(() => {
+                        addMessageToChat("🧠 <strong>Insurance Advisor</strong> uses AI to suggest the best health insurance plans for your needs, based on documents and real data.", 'bot');
+                        setTimeout(() => {
+                            addMessageToChat("👉 Should I open the advisor for you?", 'bot');
+                            showRedirectButtons("https://ankit2061-ai-adviser-1-0-app-cbfvsy.streamlit.app");
+                        }, 800);
+                    }, 400);
+                    return "";
+                }
+
+                if (input.includes("patient chatbot")) {
+                    setTimeout(() => {
+                        addMessageToChat("💬 <strong>Patient Chatbot</strong> answers your health-related queries from uploaded documents. It's like chatting with your own medical guide. 🩺", 'bot');
+                        setTimeout(() => {
+                            addMessageToChat("👉 Want to open the chatbot?", 'bot');
+                            showRedirectButtons("https://ankit2061-patientchatbot-app-hefjez.streamlit.app/");
+                        }, 800);
+                    }, 400);
+                    return "";
+                }
+                if (input.includes("secure document storage")) {
+                    setTimeout(() => {
+                        addMessageToChat("💬 <strong>Secure Document Storage</strong> 💾 All your uploaded files are stored in secure, encrypted storage.\nHIPAA-compliant, password-protected, and only you can access them.\nNo third-party ever sees your data. 🔐", 'bot');
+                        setTimeout(() => {
+                            addMessageToChat("👉 Want to open the chatbot?", 'bot');
+                            showRedirectButtons("http://localhost:8502");
+                        }, 800);
+                    }, 400);
+                    return "";
+                }
+
+                // If user asks for unknown feature
+                if (
+                    input.includes("how to use") ||
+                    input.includes("i want to use") ||
+                    input.includes("open") ||
+                    input.includes("show me")
+                ) {
+                    if (!(
+                        input.includes("summarizer") ||
+                        input.includes("generator") ||
+                        input.includes("advisor") ||
+                        input.includes("chatbot") ||
+                        input.includes("storage")
+                    )) {
+                        return `❌ That feature isn’t available yet. Here’s what I can help with:
+              📄 Summarizer
+              ✍️ Document Generator
+              🧠 Insurance Advisor
+              💬 Patient Chatbot
+              💾 Secure Storage`;
+                    }
+                }
+
+                // Error fallback
+                if (
+                    input.includes("not working") ||
+                    input.includes("error") ||
+                    input.includes("issue") ||
+                    input.includes("problem") ||
+                    input.includes("can't") ||
+                    input.includes("bug") ||
+                    input.includes("unable")
+                ) {
+                    return `Please email us at 📧 <strong>swasthya.help.2025@gmail.com</strong> for help. We’ll get back to you quickly.`;
+                }
+
+                // Term definitions
+                for (const [term, definition] of Object.entries(claimTerms)) {
+                    if (input.includes(term)) {
+                        return `<strong>${term.charAt(0).toUpperCase() + term.slice(1)}:</strong> ${definition} 📚`;
+                    }
+                }
+
+                // Static KB fallback
+                for (const [key, value] of Object.entries(knowledgeBase)) {
+                    if (input.includes(key)) {
+                        return value;
+                    }
+                }
+
+                return `I couldn’t find what you meant. Please mail us at 📧 <strong>swasthya.help.2025@gmail.com</strong>`;
+            }
+
+
+
+            // Function to handle sending a message
+            function sendUserMessage() {
+                if (!chatInputField || !chatMessages) {
+                    console.error('Chat input or messages container not found');
+                    return;
+                }
+
+                const userInput = chatInputField.value.trim();
+                if (userInput === '') return;
+
+                addMessageToChat(userInput, 'user');
+                chatInputField.value = '';
+
+                // Show typing indicator
+                const typingDiv = document.createElement('div');
+                typingDiv.classList.add('message', 'bot-message');
+                typingDiv.innerHTML = '<div class="loading"></div> Typing...';
+                chatMessages.appendChild(typingDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                setTimeout(() => {
+                    chatMessages.removeChild(typingDiv);
+                    const botResponse = processUserInput(userInput);
+                    addMessageToChat(botResponse, 'bot');
+
+                    // Enhanced interactions for dark theme
+
+
+                    // Handle claim status queries
+                    if (userInput.match(/^CLM\d{6}$/i)) {
+                        setTimeout(() => {
+                            addMessageToChat(`<strong>Claim ${userInput} Status:</strong> 🔄 In Processing<br>📅 Submitted: April 5, 2025<br>⏰ Estimated Completion: April 12, 2025<br><br>Would you like to see more details? 📋`, 'bot');
+
+                            const quickReplies = document.createElement('div');
+                            quickReplies.classList.add('quick-replies');
+
+                            const detailsButton = document.createElement('button');
+                            detailsButton.textContent = '📊 Show details';
+                            detailsButton.addEventListener('click', function () {
+                                addMessageToChat('Show details', 'user');
+                                setTimeout(() => {
+                                    addMessageToChat(`<strong>📋 Claim Details for ${userInput}</strong><br>
+                                    <br>🏥 Provider: Northeast Medical Center
+                                    <br>📅 Service Date: March 30, 2025
+                                    <br>💰 Billed Amount: $1,250.00
+                                    <br>🛡️ Insurance: BlueCross HealthPlus
+                                    <br>✅ Coverage: In-Network (80%)
+                                    <br>🔍 Current Stage: Medical Necessity Review
+                                    <br><br>📌 Next Steps: Once the review is complete, the claim will move to payment processing if approved.`, 'bot');
+                                }, 1000);
+                            });
+
+                            const trackButton = document.createElement('button');
+                            trackButton.textContent = '🔔 Track updates';
+                            trackButton.addEventListener('click', function () {
+                                addMessageToChat('Track updates', 'user');
+                                setTimeout(() => {
+                                    addMessageToChat('You\'ll now receive email notifications about any status changes for this claim. You can manage notification preferences in your account settings. 📧✨', 'bot');
+                                }, 1000);
+                            });
+
+                            quickReplies.appendChild(detailsButton);
+                            quickReplies.appendChild(trackButton);
+                            chatMessages.appendChild(quickReplies);
+                            chatMessages.scrollTop = chatMessages.scrollHeight;
+                        }, 1000);
+                    }
+                }, 800);
+            }
+
+            // Send message on button click
+            if (sendMessage) {
+                sendMessage.addEventListener('click', sendUserMessage);
+            }
+
+            // Send message on Enter key
+            if (chatInputField) {
+                chatInputField.addEventListener('keypress', function (e) {
+                    if (e.key === 'Enter') {
+                        sendUserMessage();
+                    }
+                });
+            }
+
+            // Initialize with welcome message
+            if (chatMessages) {
+                setTimeout(() => {
+                    addMessageToChat("Hello! I'm your सWASTHYA Sathi. How can I help you with your medical claims today? 🌟", 'bot');
+
+                    setTimeout(() => {
+                        addMessageToChat("You can ask me about uploading documents, checking claim status, or explaining medical terms. 💚", 'bot');
+                    }, 1000);
+                }, 500);
+            }
+        }
+
+        // Smooth scrolling functionality
+        function initSmoothScrolling() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 70,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+
+        // Enhanced animation effects for dark theme
+        function initAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const elements = document.querySelectorAll('.feature-card, .step, .testimonial-card');
+            elements.forEach(el => {
+                observer.observe(el);
+            });
+
+            // Enhanced hover effects for dark theme
+            const featureCards = document.querySelectorAll('.feature-card');
+            featureCards.forEach(card => {
+                card.addEventListener('mouseenter', function () {
+                    this.style.transform = 'translateY(-12px) scale(1.02)';
+                    this.style.boxShadow = '0 25px 50px rgba(0, 212, 170, 0.3)';
+                });
+
+                card.addEventListener('mouseleave', function () {
+                    this.style.transform = 'translateY(-8px) scale(1)';
+                    this.style.boxShadow = '0 20px 40px rgba(0, 212, 170, 0.2)';
+                });
+            });
+        }
+
+        // Enhanced feature links functionality
+        function initFeatureLinks() {
+            // Add enhanced click effects for dark theme
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(button => {
+                button.addEventListener('click', function (e) {
+                    // Create ripple effect
+                    const ripple = document.createElement('span');
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+
+                    ripple.style.cssText = `
+                        position: absolute;
+                        width: ${size}px;
+                        height: ${size}px;
+                        left: ${x}px;
+                        top: ${y}px;
+                        background: rgba(255, 255, 255, 0.3);
+                        border-radius: 50%;
+                        transform: scale(0);
+                        animation: ripple 0.6s linear;
+                        pointer-events: none;
+                    `;
+
+                    this.appendChild(ripple);
+
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+
+            // Add ripple animation
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes ripple {
+                    to {
+                        transform: scale(4);
+                        opacity: 0;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+    </script>
+
+    <script src="auth.js"></script>
+
+    <script>
+        // Check if user is logged in
+        document.addEventListener('DOMContentLoaded', function () {
+            const user = JSON.parse(localStorage.getItem('currentUser'));
+            if (!user) {
+                window.location.href = 'login.html';
+                return;
+            }
+            document.getElementById('userWelcome').textContent = `Welcome, ${user.fullName}`;
+        });
+    </script>
+    <script>
+        function logout() {
+            if (confirm('Are you sure you want to logout?')) {
+                window.location.href = 'login.html';
+            }
+        }</script>
+</body>
+
+</html>
